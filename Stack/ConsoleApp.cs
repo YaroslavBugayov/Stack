@@ -14,18 +14,25 @@ namespace Stack
             stack.Push(1);
             stack.Push(2);
             stack.Push(3);
-            int[] array = stack.ToArray();
-            foreach (int i in array)
-            {
-                Console.Write(i);
-            }
-            Console.WriteLine(stack.Count());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            //foreach (int i in stack)
+            stack.Push(4);
+            stack.Push(5);
+            //stack.Clear();
+            //stack.Push(6);
+            //Console.WriteLine("Pop: " + stack.Pop());
+            //Console.WriteLine("Pop: " + stack.Pop());
+            //Console.WriteLine("Peek: " + stack.Peek());
+            //int[] array = stack.ToArray();
+            //foreach (int i in array)
             //{
-            //    Console.WriteLine(i);
+            //    Console.Write(i);
             //}
+            //Console.WriteLine(stack.Count());
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Pop());
+            foreach (int i in stack)
+            {
+                Console.WriteLine(i);
+            }
         }
         
     }

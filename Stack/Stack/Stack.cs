@@ -1,38 +1,55 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace Stack
+namespace Stack.Stack
 {
     public class Stack<T> : IEnumerable<T>, ICollection
     {
-        private LinkedList<T> _data = new LinkedList<T>();
+        Node<T> current;
+        int count;
 
-        public void Push(T elem)
+        public void Push(T data)
         {
-            _data.AddFirst(elem);
+            Node<T> node = new Node<T>(data);
+
+            current.Next = current;
+            current = node;
+            count++;
         }
 
         public T Peek()
         {
-            return _data.First();
+            return current.Data;
         }
 
         public T Pop()
         {
-            T elem = _data.First();
-            _data.RemoveFirst();
-            return elem;
+            current = current.Next;
+            count--;
+            return current.Data;
         }
 
         public int Count
         {
-            get { return _data.Count; }
+            get { return count; }
         }
 
         public T[] ToArray()
         {
-            return _data.ToArray();
+            return new T[0];
         }
+
+        public void Clear()
+        {
+            current = null;
+            count = 0;
+        }
+
+        public void TrimExcess()
+        {
+            
+        }
+
         public bool IsSynchronized => throw new NotImplementedException();
 
         public object SyncRoot => throw new NotImplementedException();
@@ -44,9 +61,11 @@ namespace Stack
 
         public IEnumerator GetEnumerator()
         {
-            foreach (var datum in _data)
+            Node<T> node = current;
+            while (node != null)
             {
-                yield return datum;
+                yield return node.Data;
+                node = node.Next;
             }
         }
 
