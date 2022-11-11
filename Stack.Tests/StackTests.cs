@@ -7,17 +7,21 @@ namespace Stack.Tests
 {
     public class StackTests
     {
-        //private Stack<int> _stack;
+        private Stack<int> _stack;
         [SetUp]
         public void Setup()
         {
-
+            _stack = new Stack<int>();
         }
 
         [Test]
-        public void Test1()
+        public void Pushing_To_Stack()
         {
-            Assert.Pass();
+            var stack = new Stack<int>();
+
+            stack.Push(10);
+
+            Assert.AreEqual(10, stack.Pop());
         }
     }
 }

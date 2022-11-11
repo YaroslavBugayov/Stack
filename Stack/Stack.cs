@@ -36,9 +36,10 @@ namespace Stack
         {
             if (_count == 0) { throw new InvalidOperationException("empty"); }
             OnPop(_current);
+            var temp = _current.Data;
             _current = _current.Next;
             _count--;
-            return _current.Data;
+            return temp;
         }
 
         public int Count
