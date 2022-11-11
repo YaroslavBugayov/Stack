@@ -20,7 +20,12 @@
       "ProjectGuid": "b9ccff74-89fb-45cb-b3c0-88564b67cc95",
       "DisplayName": "ConsoleApp",
       "ColorIndex": 2
+    },
+    "68f33c3d-4901-4231-b724-b4fa78860c21": {
+      "ProjectGuid": "68f33c3d-4901-4231-b724-b4fa78860c21",
+      "DisplayName": "Stack.Tests",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

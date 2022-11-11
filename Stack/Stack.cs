@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 
 namespace Stack
 {
@@ -14,8 +13,15 @@ namespace Stack
             if (data == null) { throw new ArgumentNullException("data"); }
             Node<T> node = new Node<T>(data);
 
-            _current.Next = _current;
-            _current = node;
+            if (_current == null) { 
+                _current = node;
+                _current.Next = null; 
+            }
+            else {
+                var temp = _current;
+                _current = node;
+                _current.Next = temp;
+            }
             _count++;
             OnPush(node);
         }
@@ -44,11 +50,12 @@ namespace Stack
         {
             T[] nodes = new T[_count];
             Node<T> tempNode = _current;
-            while(_current != null)
+            for (int i = 0; i < _count; i++)
             {
-                nodes.Append(tempNode.Data);
-                tempNode = _current.Next;
+                nodes[i] = tempNode.Data;
+                tempNode = tempNode.Next;
             }
+
             return nodes;
         }
 
@@ -61,16 +68,16 @@ namespace Stack
 
         public bool Contains(T data)
         {
-            if (data != null) { throw new ArgumentNullException("data"); }
+            if (data == null) { throw new ArgumentNullException("data"); }
             Node<T> tempNode = _current;
             bool isContain = false;
-            while (_current != null)
+            while (tempNode != null)
             {
-                if (_current.Data.Equals(data))
+                if (tempNode.Data.Equals(data))
                 {
                     isContain = true;
                 }
-                tempNode = _current.Next;
+                tempNode = tempNode.Next;
             }
             return isContain;
         }
@@ -98,10 +105,10 @@ namespace Stack
             if (array.Length - index < _count) { throw new ArgumentOutOfRangeException("array"); }
 
             Node<T> tempNode = _current;
-            while (_current != null)
+            while (tempNode != null)
             {
                 array.SetValue(tempNode.Data, index++);
-                tempNode = _current.Next;
+                tempNode = tempNode.Next;
             }        
         }
 

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Stack/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Stack.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Stack.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Stack/1.0.0": {
+      "type": "project",
+      "path": "../Stack/Stack.csproj",
+      "msbuildProject": "../Stack/Stack.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Stack >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\bugay\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projects\\NET\\Stack\\Stack\\Stack.csproj": {
+              "projectPath": "C:\\Projects\\NET\\Stack\\Stack\\Stack.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

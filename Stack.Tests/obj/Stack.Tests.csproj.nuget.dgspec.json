@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\NET\\Stack\\ConsoleApp\\ConsoleApp.csproj": {}
+    "C:\\Projects\\NET\\Stack\\Stack.Tests\\Stack.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\NET\\Stack\\ConsoleApp\\ConsoleApp.csproj": {
+    "C:\\Projects\\NET\\Stack\\Stack.Tests\\Stack.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\NET\\Stack\\ConsoleApp\\ConsoleApp.csproj",
-        "projectName": "ConsoleApp",
-        "projectPath": "C:\\Projects\\NET\\Stack\\ConsoleApp\\ConsoleApp.csproj",
+        "projectUniqueName": "C:\\Projects\\NET\\Stack\\Stack.Tests\\Stack.Tests.csproj",
+        "projectName": "Stack.Tests",
+        "projectPath": "C:\\Projects\\NET\\Stack\\Stack.Tests\\Stack.Tests.csproj",
         "packagesPath": "C:\\Users\\bugay\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\NET\\Stack\\ConsoleApp\\obj\\",
+        "outputPath": "C:\\Projects\\NET\\Stack\\Stack.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bugay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,24 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

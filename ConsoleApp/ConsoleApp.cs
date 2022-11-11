@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
+using Stack;
 
-namespace Stack
+namespace ConsoleApp
 {
-    public class ConsoleApp
+    internal class ConsoleApp
     {
         public static void Main()
         {
             // Initialization
-            var stack = new Stack<int>();
+            var stack = new Stack.Stack<int>();
 
             // Filling an array
             stack.Push(1);
@@ -63,7 +61,7 @@ namespace Stack
             PrintArray(copiedArray);
         }
 
-        static void PrintArray(Stack<int> stack)
+        static void PrintArray(Stack.Stack<int> stack)
         {
             Console.WriteLine("Array: ");
             foreach (int i in stack)
