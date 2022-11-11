@@ -17,6 +17,7 @@ namespace Stack.Stack
             _current.Next = _current;
             _current = node;
             _count++;
+            OnPush(node);
         }
 
         public T Peek()
@@ -28,6 +29,7 @@ namespace Stack.Stack
         public T Pop()
         {
             if (_count == 0) { throw new InvalidOperationException("empty"); }
+            OnPop(_current);
             _current = _current.Next;
             _count--;
             return _current.Data;
@@ -54,6 +56,7 @@ namespace Stack.Stack
         {
             _current = null;
             _count = 0;
+            OnClear();
         }
 
         public bool Contains(T data)
