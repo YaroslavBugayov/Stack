@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Stack.Stack
+namespace Stack
 {
     public class Node<T>
     {

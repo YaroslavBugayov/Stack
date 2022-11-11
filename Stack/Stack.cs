@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace Stack.Stack
+namespace Stack
 {
     public class Stack<T> : IEnumerable<T>, ICollection
     {
