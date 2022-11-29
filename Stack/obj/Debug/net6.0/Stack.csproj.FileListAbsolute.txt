@@ -4,8 +4,9 @@ C:\Projects\NET\Stack\Stack\obj\Debug\net6.0\Stack.AssemblyInfo.cs
 C:\Projects\NET\Stack\Stack\obj\Debug\net6.0\Stack.csproj.CoreCompileInputs.cache
 C:\Projects\NET\Stack\Stack\bin\Debug\net6.0\Stack.deps.json
 C:\Projects\NET\Stack\Stack\bin\Debug\net6.0\Stack.dll
-C:\Projects\NET\Stack\Stack\bin\Debug\net6.0\ref\Stack.dll
 C:\Projects\NET\Stack\Stack\bin\Debug\net6.0\Stack.pdb
 C:\Projects\NET\Stack\Stack\obj\Debug\net6.0\Stack.dll
 C:\Projects\NET\Stack\Stack\obj\Debug\net6.0\ref\Stack.dll
 C:\Projects\NET\Stack\Stack\obj\Debug\net6.0\Stack.pdb
+C:\Projects\NET\Stack\Stack\obj\Debug\net6.0\Stack.csproj.AssemblyReference.cache
+C:\Projects\NET\Stack\Stack\obj\Debug\net6.0\refint\Stack.dll

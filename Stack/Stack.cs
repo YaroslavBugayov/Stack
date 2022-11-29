@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace Stack
 {
@@ -51,10 +52,12 @@ namespace Stack
         {
             T[] nodes = new T[_count];
             Node<T> tempNode = _current;
-            for (int i = 0; i < _count; i++)
+            int i = 0;
+            while (tempNode != null)
             {
                 nodes[i] = tempNode.Data;
                 tempNode = tempNode.Next;
+                i++;
             }
 
             return nodes;
@@ -100,10 +103,9 @@ namespace Stack
         public void CopyTo(Array array, int index)
         {
             if (array == null) { throw new ArgumentNullException("array"); }
-            if (index < 0) { throw new ArgumentNullException ("index"); }
             if (array.Rank != 1) { throw new ArgumentException("rank"); }
-            if (_current == null) { throw new InvalidOperationException("empty"); }
-            if (array.Length - index < _count) { throw new ArgumentOutOfRangeException("array"); }
+            if (index < 0) { throw new ArgumentOutOfRangeException ("index"); }
+            if (array.Length - index < _count) { throw new ArgumentOutOfRangeException("index"); }
 
             Node<T> tempNode = _current;
             while (tempNode != null)
