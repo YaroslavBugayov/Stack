@@ -122,6 +122,16 @@ namespace Stack.Tests
         }
 
         [Test]
+        public void Contains_PushNull_ThrowArgumentNullExceptionWithParameterData() 
+        {
+            var stack = new Stack<string>();
+
+            Action act = () => stack.Contains(null);
+
+            act.Should().Throw<ArgumentNullException>().WithParameterName("data");
+        }
+
+        [Test]
         public void IsSynchronized_ReturnFalse()
         {
             var stack = new Stack<int>();
@@ -236,6 +246,16 @@ namespace Stack.Tests
             foreach (int i in stack) { }
         }
 
-        
+        [Test]
+        public void IEnumerableTGetEnumerator()
+        {
+            var stack = new Stack<int>();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            IEnumerable<int> test = stack;
+            
+            foreach (int i in test) { }
+        }
     }
 }

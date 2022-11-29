@@ -126,8 +126,8 @@ namespace Stack
         }
 
         IEnumerator<T> IEnumerable<T>.GetEnumerator()
-        {
-            return (IEnumerator<T>)GetEnumerator();
+        { 
+            return (IEnumerator<T>)GetEnumerator(); 
         }
 
         public event EventHandler<Node<T>> EventPush = delegate { };
