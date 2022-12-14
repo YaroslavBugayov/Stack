@@ -2,18 +2,12 @@ using NUnit.Framework;
 using FluentAssertions;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Collections;
 
 namespace Stack.Tests
 {
     public class StackTests
     {
-        private Stack<int> _stack;
-        [SetUp]
-        public void Setup()
-        {
-            _stack = new Stack<int>();
-        }
 
         [Test]
         public void Push10_PopLastElem_Return10()
@@ -235,27 +229,43 @@ namespace Stack.Tests
         }
 
         [Test]
-        public void GetEnumerator()
+        public void GetEnumerator_Push2Elements_ReturnFirstElement()
         {
             var stack = new Stack<int>();
 
             stack.Push(1);
             stack.Push(2);
-            stack.Push(3);
+            IEnumerator e = ((IEnumerable)stack).GetEnumerator();
+            e.MoveNext();
+            e.MoveNext();
+            object obj = e.Current;
 
-            foreach (int i in stack) { }
+            obj.Should().Be(1);
+        }
+
+        [Test]
+        public void GetEnumerator_EmptyStack_ReturnNull()
+        {
+            var stack = new Stack<int>();
+
+            IEnumerator e = ((IEnumerable)stack).GetEnumerator();
+            e.MoveNext();
+            object obj = e.Current;
+
+            obj.Should().Be(0);
         }
 
         [Test]
         public void IEnumerableTGetEnumerator()
         {
             var stack = new Stack<int>();
+
             stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            IEnumerable<int> test = stack;
-            
-            foreach (int i in test) { }
+            IEnumerator<int> e = (IEnumerator<int>)stack.GetEnumerator();
+            e.MoveNext();
+            object obj = e.Current;
+
+            obj.Should().Be(1);
         }
     }
 }

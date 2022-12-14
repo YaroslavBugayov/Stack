@@ -115,7 +115,12 @@ namespace Stack
             }        
         }
 
-        public IEnumerator GetEnumerator()
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<T> GetEnumerator()
         {
             Node<T> node = _current;
             while (node != null)
@@ -123,11 +128,6 @@ namespace Stack
                 yield return node.Data;
                 node = node.Next;
             }
-        }
-
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
-        { 
-            return (IEnumerator<T>)GetEnumerator(); 
         }
 
         public event EventHandler<Node<T>> EventPush = delegate { };

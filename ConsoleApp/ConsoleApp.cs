@@ -10,7 +10,7 @@ namespace ConsoleApp
         {
             // Initialization
             var stack = new Stack.Stack<int>();
-
+            
             // Filling an array
             stack.Push(1);
             stack.Push(2);
