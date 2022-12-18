@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.996031746031746" branch-rate="1" lines-covered="251" lines-valid="252" branches-covered="34" branches-valid="34" complexity="68" version="0" timestamp="1671062360">
+<coverage line-rate="0.996031746031746" branch-rate="1" lines-covered="251" lines-valid="252" branches-covered="34" branches-valid="34" complexity="68" version="0" timestamp="1671380770">
   <sources>
     <source>C:\</source>
   </sources>
@@ -317,7 +317,7 @@
         </class>
         <class name="Stack.Tests.StackTests" filename="C:\Projects\NET\Stack\Stack.Tests\StackTests.cs" line-rate="1" branch-rate="1" complexity="22">
           <methods>
-            <method name="Push10_PopLastElem_Return10" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="Push_Push10andPopLastItem_Return10" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="14" hits="1" branch="false" />
                 <line number="15" hits="1" branch="false" />
@@ -335,7 +335,7 @@
                 <line number="30" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="Push5And2_PopLastElem_Return2" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="Push_Push5And2AndPopLastElem_Return2" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="33" hits="1" branch="false" />
                 <line number="34" hits="1" branch="false" />
@@ -345,7 +345,7 @@
                 <line number="40" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="Push0_PeekLastElem_Return0" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="Peek_Push0AndPeekLastElem_Return0" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="44" hits="1" branch="false" />
                 <line number="45" hits="1" branch="false" />
@@ -404,7 +404,7 @@
                 <line number="106" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="Contains5_Push5_ReturnTrue" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="Contains_Push5Contains5_ReturnTrue" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="110" hits="1" branch="false" />
                 <line number="111" hits="1" branch="false" />
@@ -413,7 +413,7 @@
                 <line number="116" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="Contains_PushNull_ThrowArgumentNullExceptionWithParameterData" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="Contains_ContainsNull_ThrowArgumentNullExceptionWithParameterData" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="120" hits="1" branch="false" />
                 <line number="121" hits="1" branch="false" />
@@ -517,7 +517,7 @@
                 <line number="229" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="GetEnumerator_Push2Elements_ReturnFirstElement" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="GetEnumerator_Push1And2_Return1" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="233" hits="1" branch="false" />
                 <line number="234" hits="1" branch="false" />
@@ -542,7 +542,7 @@
                 <line number="256" hits="1" branch="false" />
               </lines>
             </method>
-            <method name="IEnumerableTGetEnumerator" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="GetEnumeratorGeneric_Push1ToStack_Return1" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="260" hits="1" branch="false" />
                 <line number="261" hits="1" branch="false" />

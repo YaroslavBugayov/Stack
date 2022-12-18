@@ -10,7 +10,7 @@ namespace Stack.Tests
     {
 
         [Test]
-        public void Push10_PopLastElem_Return10()
+        public void Push_Push10andPopLastItem_Return10()
         {
             var stack = new Stack<int>();
 
@@ -30,7 +30,7 @@ namespace Stack.Tests
         }
 
         [Test]
-        public void Push5And2_PopLastElem_Return2() { 
+        public void Push_Push5And2AndPopLastElem_Return2() { 
             var stack = new Stack<int>();
 
             stack.Push(5);
@@ -40,7 +40,7 @@ namespace Stack.Tests
         }
 
         [Test]
-        public void Push0_PeekLastElem_Return0()
+        public void Peek_Push0AndPeekLastElem_Return0()
         {
             var stack = new Stack<int>();
 
@@ -106,7 +106,7 @@ namespace Stack.Tests
         }
 
         [Test]
-        public void Contains5_Push5_ReturnTrue()
+        public void Contains_Push5Contains5_ReturnTrue()
         {
             var stack = new Stack<int>();
 
@@ -116,7 +116,7 @@ namespace Stack.Tests
         }
 
         [Test]
-        public void Contains_PushNull_ThrowArgumentNullExceptionWithParameterData() 
+        public void Contains_ContainsNull_ThrowArgumentNullExceptionWithParameterData() 
         {
             var stack = new Stack<string>();
 
@@ -229,7 +229,7 @@ namespace Stack.Tests
         }
 
         [Test]
-        public void GetEnumerator_Push2Elements_ReturnFirstElement()
+        public void GetEnumerator_Push1And2_Return1()
         {
             var stack = new Stack<int>();
 
@@ -256,12 +256,12 @@ namespace Stack.Tests
         }
 
         [Test]
-        public void IEnumerableTGetEnumerator()
+        public void GetEnumeratorGeneric_Push1ToStack_Return1()
         {
             var stack = new Stack<int>();
 
             stack.Push(1);
-            IEnumerator<int> e = (IEnumerator<int>)stack.GetEnumerator();
+            IEnumerator<int> e = stack.GetEnumerator();
             e.MoveNext();
             object obj = e.Current;
 
